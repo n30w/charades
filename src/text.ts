@@ -57,5 +57,11 @@ export const introParagraph: Array<string> = [
 export const demonstrationParagraph1: Array<string> = [
   `Is visual processing a necessary aspect of seeing? Sensory input is a requirement for interpretation and processing for any type of consciousness. An LLM model such as ChatGPT has a couple methods now of input, such as microphone, text, and image input. Can an GPT see with just text input similar to the way humans do?`,
 
-  `To test this, I created a game of Charades in P5 that interfaces with ChatGPT. If I were to put you in a room with a pencil and a coordinate grid, then after doing that, I orate coordinate values like (1, 2) or (-3, 4) until I stop, tell me the shape or figure that I have given you. What shape do you see? That is the approach of what I tried to do with ChatGPT-3.5.`,
+  `To test this, I created a game of Charades in P5 that interfaces with ChatGPT. If I were to put you in a room with a pencil and a coordinate grid, then after doing that, I orate coordinate values like (1, 2) or (-3, 4) until I stop, tell me the shape or figure that I have given you. What shape do you see? That is the approach of what I tried to do with ChatGPT-3.5. This is the prompt that interfaces with GPT:`,
+];
+
+export const demonstrationParagraph2: Array<string> = [
+  `Th p5 sketch does not currently work right now. I am using Next.JS to create this webpage, and so the fault is coming from needing to use Server Side API rather than client. Accessing the OpenAI API through proxy just requires this one step. Regardless...  `,
+
+  `The model's accuracy is not very accurate, nor precise. What could be the issue? `,
 ];

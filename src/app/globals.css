@@ -76,3 +76,12 @@ body {
 #submit {
 
 }
+
+#typebox-label {
+  font-family: var(--font-archivoBlack);
+}
+
+#prompt {
+  font-family: var(--font-archivoBlack);
+  @apply w-96 font-light text-xl
+}

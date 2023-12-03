@@ -18,10 +18,10 @@ const visualization = ({ proxyUrl }: { proxyUrl: string }): SketchCleanup => {
     let coords: Array<xyPair> = [];
     p.setup = () => {
       //@ts-ignore
-      p.createCanvas(600, 600);
+      p.createCanvas(600, 600).parent("sketchFrame");
       // canvas.parent("p5Canvas");
-      p.background(255);
-      p.colorMode(p.RGB, 255);
+      p.background(0);
+      p.colorMode(p.RGB, 0);
 
       //@ts-ignore
       p.select("#submit").mouseClicked(() => {
@@ -39,13 +39,13 @@ const visualization = ({ proxyUrl }: { proxyUrl: string }): SketchCleanup => {
     p.draw = () => {
       if (guess !== "") {
         p.textSize(20);
-        p.fill(0);
-        p.text(guess, 1, 620);
+        p.fill(255);
+        p.text(guess, 1, 600);
       }
       if (p.mouseIsPressed === true) {
         let x = p.mouseX;
         let y = p.mouseY;
-        p.fill(0);
+        p.fill(255);
         p.noStroke();
         p.ellipse(x, y, 20, 20);
         let pair: xyPair = { x: x, y: y };
@@ -61,19 +61,11 @@ const visualization = ({ proxyUrl }: { proxyUrl: string }): SketchCleanup => {
   return {
     cleanup: p5.remove,
   };
-
-  const P5Sketch = () => {
-    useEffect(() => {
-      const p5 = require("p5");
-
-      new p5((p: P5) => {});
-    });
-  };
 };
 
 export const DisplaySketch = ({ proxyUrl }: { proxyUrl: string }) => {
   const id = useId();
-
+  console.log(proxyUrl);
   useEffect(() => {
     const { cleanup } = visualization({ proxyUrl });
 
