@@ -18,11 +18,23 @@
 @layer base {
   h1, h2, h3, h4, h5, h6{
     font-family: var(--font-archivoBlack);
-    @apply text-8xl tracking-tighter font-bold;
+    @apply text-8xl tracking-tighter font-bold max-w-xl text-left;
+  }
+
+  h1 {
+    @apply text-9xl tracking-tighter font-bold max-w-2xl
   }
 
   h2 {
     @apply text-4xl tracking-tight font-bold;
+  }
+
+  h3 {
+    @apply text-2xl max-w-5xl;
+  }
+
+  h4 {
+    @apply text-xl
   }
 
   ul {
@@ -49,5 +61,6 @@ body {
 }
 
 .paragraph-container {
+
   @apply max-w-xl;
 }

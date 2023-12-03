@@ -8,7 +8,6 @@ export default function Introduction() {
       <div id="intro-container">
         <div className="flex-none">{createDialogue(conversation1)}</div>
       </div>
-      <p>Figure 1: What is a charade?</p>
       {createParagraphs(introParagraph)}
     </>
   );

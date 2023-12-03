@@ -5,7 +5,7 @@ export const createDialogue = (
 ) => {
   return (
     <>
-      <ul className="max-w-md">
+      <ul className="max-w-xl">
         {dialogue.map((l, i) => {
           return (
             <li key={i}>

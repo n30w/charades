@@ -49,8 +49,6 @@ export const conversation1: Array<{ speaker: string; text: string }> = [
 ];
 
 export const introParagraph: Array<string> = [
-  `This text was not created with any Artificial Intelligence models or tools. No ChatGPT was involved in the creation of this text. This is raw text from the mind of Neo Alabastro.`,
-
   `Best-of-Breed (BoB) and End-to-End (E2E) are both lingo used in business financial contexts to  categorize technology solutions to determine whether they are viable options for the business’ business. Does it make the most money? A BoB solution means choosing the best tool for the job and implementing them individually. An E2E solution means choosing a single tool, a multi-tool, that helps the business develop a product from its conception to its delivery.`,
 
   `Artificial intelligence (AI) is not yet E2E. Current AI tools are very specialized in their approach and purpose: ChatGPT, a cutting-edge Large Language Model (LLM) that speaks with a voice unmistakably human; Midjourney and DALL-E, two advanced stable diffusion models capable of transmuting precise words into accurate images; ElevenLabs, an elaborate parrot that can mimic, through voice recordings, someone of ours long lost.`,
