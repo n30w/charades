@@ -1,7 +1,9 @@
-import Demonstration from "@/sections/demonstration";
 import Introduction from "@/sections/introduction";
+import dynamic from "next/dynamic";
 
-// const Sketch = dynamic(() => import("@/sketch/sketch"), { ssr: false });
+const Demonstration = dynamic(() => import("@/sections/demonstration"), {
+  ssr: false,
+});
 
 export default function Home() {
   return (
