@@ -47,9 +47,6 @@
     margin: 12px 0;
   }
 
-  p {
-
-  }
 }
 
 body {
@@ -57,7 +54,7 @@ body {
 }
 
 #intro-container {
-  @apply flex space-x-2;
+  @apply flex space-x-2 py-5;
 }
 
 .paragraph-container {

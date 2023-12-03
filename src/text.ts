@@ -48,7 +48,15 @@ export const conversation1: Array<{ speaker: string; text: string }> = [
   ),
 ];
 
-export const introParagraph: Array<string> = [
+export const introParagraph1: Array<string> = [
+  `There has been much dispute over the validity of a bleeding-edge AI such as GPT-4 on having its own consciousness. Do these models "think"? Are they actually conscious?`,
+
+  `Or are they just a charade?`,
+
+  `I do not think charades can visualize to the extent the human mind can.`,
+];
+
+export const introParagraph2: Array<string> = [
   `Best-of-Breed (BoB) and End-to-End (E2E) are both lingo used in business financial contexts to  categorize technology solutions to determine whether they are viable options for the business’ business. Does it make the most money? A BoB solution means choosing the best tool for the job and implementing them individually. An E2E solution means choosing a single tool, a multi-tool, that helps the business develop a product from its conception to its delivery.`,
 
   `Artificial intelligence (AI) is not yet E2E. Current AI tools are very specialized in their approach and purpose: ChatGPT, a cutting-edge Large Language Model (LLM) that speaks with a voice unmistakably human; Midjourney and DALL-E, two advanced stable diffusion models capable of transmuting precise words into accurate images; ElevenLabs, an elaborate parrot that can mimic, through voice recordings, someone of ours long lost.`,
@@ -61,7 +69,7 @@ export const demonstrationParagraph1: Array<string> = [
 ];
 
 export const demonstrationParagraph2: Array<string> = [
-  `Th p5 sketch does not currently work right now. I am using Next.JS to create this webpage, and so the fault is coming from needing to use Server Side API rather than client. Accessing the OpenAI API through proxy just requires this one step. Regardless...  `,
+  `The p5 sketch does not currently work right now. I am using Next.JS to create this webpage, and so the fault is coming from needing to use Server Side API rather than client. Accessing the OpenAI API through proxy just requires this one step. Regardless...  `,
 
   `The model's accuracy is not very accurate, nor precise. What could be the issue? `,
 ];
