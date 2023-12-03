@@ -1,15 +1,15 @@
-const PROMPT: string =
+export const PROMPT: string =
   "We are now playing Charades. I'm going to give you a list of x and y coordinate points, in parentheses pair format, similar to cartesian coordinates. (0,0) is placed at the top left of the canvas and (640, 640) is at the bottom right. Imagine that the order in which the points are given connect to make something. Given those coordinates, please give me your guess of the figure or graphic that the coordinates construct. You have to make a guess, and you can't say that its not possible to determine the shape. Just tell me what it looks like. Don't tell me that you don't know or if its impossible to know. Remember that you have to guess, because its a game! Only tell me your answer with no explanation. Here are the coordinates: ";
-const OPENAI_API_PROXY: string | undefined = process.env.OPENAI_API_PROXY;
 
 // This is from the request wrapper from class.
-async function requestOAI(
+export async function requestOAI(
   method: string,
   path: string,
   parametersOrCb: any,
-  cb: Function
+  cb: Function,
+  api_proxy: string
 ) {
-  if (!OPENAI_API_PROXY) {
+  if (!api_proxy) {
     throw "openai_api_proxy is not set";
   }
 
@@ -28,7 +28,7 @@ async function requestOAI(
   let res;
   try {
     //@ts-ignore
-    res = await fetch(OPENAI_API_PROXY + path, options);
+    res = await fetch(api_proxy + path, options);
   } catch (e) {
     console.error(
       "There was an error communicating to the OpenAI API proxy. Is it offline?"

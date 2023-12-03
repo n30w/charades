@@ -1,13 +1,14 @@
-type xyPair = {
+import { PROMPT, requestOAI } from "./openai";
+
+const GPT_MODEL = "gpt-3.5-turbo";
+
+export type xyPair = {
   x: number;
   y: number;
 };
 
-let coords: Array<xyPair> = [];
-let guess = "";
-
 // purge removes coordinates that are already in the array
-function purge(arr: Array<string>) {
+export function purge(arr: Array<string>) {
   const m = new Map();
   const newArr = [];
   for (let i = 0; i < arr.length; i++) {
@@ -20,7 +21,7 @@ function purge(arr: Array<string>) {
 }
 
 // packData turns the coordinate objects into an array that can be sent to GPT
-function packData(arr: Array<xyPair>): Array<string> {
+export function packData(arr: Array<xyPair>): Array<string> {
   const newArr = [];
   for (let i = 0; i < arr.length; i++) {
     newArr.push("(" + arr[i].x + ", " + arr[i].y + ")");
@@ -28,8 +29,9 @@ function packData(arr: Array<xyPair>): Array<string> {
   return newArr;
 }
 
-function sendMessage() {
+export function sendMessage(coords: Array<xyPair>, api_proxy: string): any {
   const data = purge(packData(coords));
+  let response;
   // so we can start a new messages array for every input
   let messages = [
     {
@@ -40,17 +42,26 @@ function sendMessage() {
 
   // send the request
   let params = {
-    model: "gpt-3.5-turbo",
+    model: GPT_MODEL,
     messages: messages,
     temperature: 0.8,
   };
-  requestOAI("POST", "/v1/chat/completions", params, gotResults);
+  requestOAI(
+    "POST",
+    "/v1/chat/completions",
+    params,
+    (results: any) => {
+      response = results.choices[0].message.content;
+    },
+    api_proxy
+  );
 
+  return response;
   // Note: there are additional parameters available, see
   // https://platform.openai.com/docs/api-reference/chat
 }
 
-function gotResults(results: any) {
+function gotResults(results: any): any {
   let message = results.choices[0].message.content;
-  guess = message;
+  return message;
 }

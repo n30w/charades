@@ -1,8 +1,9 @@
+import Demonstration from "@/sections/demonstration";
 import Introduction from "@/sections/introduction";
 import dynamic from "next/dynamic";
 import P5 from "p5";
 
-const Sketch = dynamic(() => import("@/sketch/sketch"), { ssr: false });
+// const Sketch = dynamic(() => import("@/sketch/sketch"), { ssr: false });
 
 export default function Home() {
   return (
@@ -13,8 +14,8 @@ export default function Home() {
         NEO ALABASTRO
       </h3>
       <h1>CHARADES</h1>
-      {Introduction()}
-      <Sketch />
+      <Introduction />
+      <Demonstration />
     </main>
   );
 }

@@ -53,3 +53,9 @@ export const introParagraph: Array<string> = [
 
   `Artificial intelligence (AI) is not yet E2E. Current AI tools are very specialized in their approach and purpose: ChatGPT, a cutting-edge Large Language Model (LLM) that speaks with a voice unmistakably human; Midjourney and DALL-E, two advanced stable diffusion models capable of transmuting precise words into accurate images; ElevenLabs, an elaborate parrot that can mimic, through voice recordings, someone of ours long lost.`,
 ];
+
+export const demonstrationParagraph1: Array<string> = [
+  `Is visual processing a necessary aspect of seeing? Sensory input is a requirement for interpretation and processing for any type of consciousness. An LLM model such as ChatGPT has a couple methods now of input, such as microphone, text, and image input. Can an GPT see with just text input similar to the way humans do?`,
+
+  `To test this, I created a game of Charades in P5 that interfaces with ChatGPT. If I were to put you in a room with a pencil and a coordinate grid, then after doing that, I orate coordinate values like (1, 2) or (-3, 4) until I stop, tell me the shape or figure that I have given you. What shape do you see? That is the approach of what I tried to do with ChatGPT-3.5.`,
+];
